@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Cache bust for color update - #f18021 */
+
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
 All colors MUST be HSL.
 */
@@ -17,16 +19,16 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 220 15% 20%;
 
-    --primary: 20 88% 56%;
+    --primary: 27, 88%, 54%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 20 100% 70%;
+    --secondary: 18 100% 70%;
     --secondary-foreground: 0 0% 100%;
 
     --muted: 220 15% 95%;
     --muted-foreground: 220 10% 50%;
 
-    --accent: 20 88% 56%;
+    --accent: 27, 88%, 54%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -34,7 +36,7 @@ All colors MUST be HSL.
 
     --border: 220 15% 88%;
     --input: 220 15% 92%;
-    --ring: 20 88% 56%;
+    --ring: 27, 88%, 54%;
 
     --radius: 0.75rem;
 
@@ -65,16 +67,16 @@ All colors MUST be HSL.
     --popover: 220 20% 12%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 20 88% 56%;
+    --primary: 27, 88%, 54%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 20 100% 70%;
+    --secondary: 18 100% 70%;
     --secondary-foreground: 0 0% 100%;
 
     --muted: 220 15% 20%;
     --muted-foreground: 220 10% 65%;
 
-    --accent: 20 88% 56%;
+    --accent: 27, 88%, 54%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 30.6%;
@@ -82,7 +84,7 @@ All colors MUST be HSL.
 
     --border: 220 15% 20%;
     --input: 220 15% 20%;
-    --ring: 20 88% 56%;
+    --ring: 27, 88%, 54%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -102,4 +104,9 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Color update - forcing refresh */
+.temp-color-refresh {
+  color: hsl(var(--primary));
 }

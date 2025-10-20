@@ -51,18 +51,8 @@ END:VCARD`;
 
   return (
     <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-border/50">
-      {/* Header with Juleb branding */}
-      <div className="bg-primary p-5 md:p-8 text-center relative overflow-hidden">
-        <h3 className="text-2xl md:text-4xl font-extrabold tracking-wide" style={{ 
-          color: 'white',
-          textShadow: '0 0 1px white',
-          WebkitTextStroke: '1px white md:1.5px',
-          WebkitTextFillColor: 'transparent'
-        }}>JULEB</h3>
-      </div>
-
       {/* Profile Photo */}
-      <div className="flex justify-center -mt-12 md:-mt-16 mb-4 md:mb-6">
+      <div className="flex justify-center pt-8 md:pt-10 mb-4 md:mb-6">
         <div className="bg-card p-2 md:p-2.5 rounded-3xl shadow-xl ring-4 ring-background">
           <img 
             src={photo} 
