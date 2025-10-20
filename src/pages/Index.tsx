@@ -11,8 +11,8 @@ const Index = () => {
       email: "hussain@juleb.com",
       phone: "+966560013470",
       linkedin: "https://www.linkedin.com/in/hussain-alaidarous/",
-      photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
-      description: "Juleb is an AI-powered, modular ERP transforming the pharmaceutical supply chain with seamless Track & Trace compliance and operational efficiency."
+      photo: "src/profile-pics/hussain.jpg",
+      description: "I am an executive with a passion for solving critical problems through the use of technology. My specialty is building highly scalable cloud infrastructure using open source solutions. My goal is to deliver sustainable web & mobile solutions that meets the highest standard in performance and security."
     },
     {
       name: "Yousuf Jamjoom",
@@ -49,6 +49,15 @@ const Index = () => {
       linkedin: "https://www.linkedin.com/in/eman-khalifa-91159b100/",
       photo: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
       description: "Driving operational excellence and ensuring seamless implementation of Juleb's innovative solutions."
+    },
+    {
+      name: "Ahmed El-Sabbagh",
+      title: "Enterprise Innovation Consultant",
+      email: "a.elsabbagh@juleb.com",
+      phone: "+966560524018",
+      linkedin: "linkedin.com/in/ahmedelsabbagh/",
+      photo: "src/profile-pics/sabbagh.jpg",
+      description: "Licensed pharmacist and results-driven business growth leader with extensive experience in B2B SaaS, healthcare, and pharmaceutical technology. Proven success in expanding markets, boosting sales efficiency by 300%, optimizing sales cycles, and building client relationships across the GCC"
     },
     {
       name: "Nada Elnakoury",
