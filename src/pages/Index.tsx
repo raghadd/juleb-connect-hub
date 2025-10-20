@@ -50,45 +50,45 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="bg-background py-20 px-4 border-b">
+      <section className="bg-background py-10 md:py-20 px-4 border-b">
         <div className="container mx-auto text-center">
-          <div className="mb-8">
-            <h1 className="text-6xl md:text-7xl font-bold tracking-wide mb-2" style={{ 
+          <div className="mb-4 md:mb-8">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-wide mb-1 md:mb-2" style={{ 
               color: 'hsl(var(--primary))',
               textShadow: '0 0 1px hsl(var(--primary))',
-              WebkitTextStroke: '2px hsl(var(--primary))',
+              WebkitTextStroke: '1.5px hsl(var(--primary))',
               WebkitTextFillColor: 'transparent'
             }}>
               JULEB
             </h1>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 md:mb-6">
             Welcome to Juleb Event
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base md:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
             Join us and connect with the team transforming pharmaceutical supply chains
           </p>
         </div>
       </section>
 
       {/* Registration Section */}
-      <section className="py-16 px-4">
+      <section className="py-8 md:py-16 px-4">
         <div className="container mx-auto">
           <RegistrationForm />
         </div>
       </section>
 
       {/* Company Link Section */}
-      <section className="py-16 px-4 bg-background">
+      <section className="py-10 md:py-16 px-4 bg-background">
         <div className="container mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6 text-foreground">Learn More About Juleb</h2>
-          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+          <h2 className="text-2xl md:text-4xl font-bold mb-3 md:mb-6 text-foreground px-4">Learn More About Juleb</h2>
+          <p className="text-sm md:text-lg text-muted-foreground mb-6 md:mb-8 max-w-2xl mx-auto px-4">
             Discover how Juleb is revolutionizing pharmaceutical supply chain management
             with AI-powered modular ERP solutions.
           </p>
           <Button 
             size="lg"
-            className="text-lg px-8"
+            className="text-base md:text-lg px-6 md:px-8 h-11 md:h-12"
             asChild
           >
             <a 
@@ -98,23 +98,23 @@ const Index = () => {
               className="flex items-center gap-2"
             >
               Visit Juleb Company Profile
-              <ExternalLink className="w-5 h-5" />
+              <ExternalLink className="w-4 md:w-5 h-4 md:h-5" />
             </a>
           </Button>
         </div>
       </section>
 
       {/* Team Section */}
-      <section className="py-20 px-4 bg-muted/20">
+      <section className="py-10 md:py-20 px-4 bg-muted/20">
         <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold mb-6 text-foreground">Meet Our Team</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <div className="text-center mb-8 md:mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold mb-3 md:mb-6 text-foreground px-4">Meet Our Team</h2>
+            <p className="text-sm md:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
               Connect with the Juleb team attending the event. Click to download their contact information.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-8">
             {employees.map((employee, index) => (
               <EmployeeCard key={index} {...employee} />
             ))}
@@ -123,9 +123,9 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-foreground/5 py-8 px-4 mt-16">
+      <footer className="bg-foreground/5 py-6 md:py-8 px-4 mt-8 md:mt-16">
         <div className="container mx-auto text-center">
-          <p className="text-muted-foreground">
+          <p className="text-sm md:text-base text-muted-foreground">
             © 2025 Juleb Inc. All rights reserved.
           </p>
         </div>
