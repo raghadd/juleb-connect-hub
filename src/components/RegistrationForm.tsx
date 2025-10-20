@@ -137,7 +137,7 @@ const RegistrationForm = () => {
           <UserPlus className="w-5 h-5 md:w-7 md:h-7 text-primary" />
         </div>
         <div>
-          <h2 className="text-xl md:text-3xl font-bold text-foreground">Mark your attendance</h2>
+          <h2 className="text-xl md:text-3xl font-bold text-foreground">Mark Your Attendance</h2>
           <p className="text-muted-foreground text-sm md:text-base">Let us get to know you</p>
         </div>
       </div>

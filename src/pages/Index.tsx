@@ -20,7 +20,7 @@ const Index = () => {
       email: "yousuf@juleb.com",
       phone: "+966550012345",
       linkedin: "https://www.linkedin.com/in/yousufjamjoom/",
-      photo: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
+      photo: "src/profile-pics/yousuf.png",
       description: "Leading Juleb's vision to revolutionize pharmaceutical supply chain management across the Middle East."
     },
     {
@@ -29,7 +29,7 @@ const Index = () => {
       email: "mey@juleb.com",
       phone: "+966550023456",
       linkedin: "https://www.linkedin.com/in/m-youssef3/",
-      photo: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
+      photo: "src/profile-pics/mey.png",
       description: "Driving operational excellence and ensuring seamless implementation of Juleb's innovative solutions."
     },
     {
