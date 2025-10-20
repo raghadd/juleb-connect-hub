@@ -50,41 +50,45 @@ END:VCARD`;
   };
 
   return (
-    <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-      {/* Header with gradient */}
-      <div className="bg-gradient-to-br from-primary to-secondary p-8 text-center relative overflow-hidden">
-        <div className="absolute inset-0 bg-white/5" />
-        <h3 className="text-3xl font-bold text-white mb-2 relative z-10 tracking-wide">JULEB</h3>
+    <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-border/50">
+      {/* Header with Juleb branding */}
+      <div className="bg-primary p-8 text-center relative overflow-hidden">
+        <h3 className="text-4xl font-extrabold tracking-wide" style={{ 
+          color: 'white',
+          textShadow: '0 0 1px white',
+          WebkitTextStroke: '1.5px white',
+          WebkitTextFillColor: 'transparent'
+        }}>JULEB</h3>
       </div>
 
       {/* Profile Photo */}
-      <div className="flex justify-center -mt-16 mb-4">
-        <div className="bg-white p-2 rounded-3xl shadow-lg">
+      <div className="flex justify-center -mt-16 mb-6">
+        <div className="bg-card p-2.5 rounded-3xl shadow-xl ring-4 ring-background">
           <img 
             src={photo} 
             alt={name}
-            className="w-32 h-32 rounded-2xl object-cover"
+            className="w-36 h-36 rounded-2xl object-cover"
           />
         </div>
       </div>
 
       {/* Employee Info */}
-      <div className="px-6 pb-6 text-center">
-        <h3 className="text-2xl font-bold text-foreground mb-1">{name}</h3>
-        <p className="text-muted-foreground font-medium mb-2">{title}</p>
-        <p className="text-sm text-muted-foreground mb-4">Juleb Inc</p>
+      <div className="px-6 pb-8 text-center">
+        <h3 className="text-2xl font-bold text-foreground mb-2">{name}</h3>
+        <p className="text-base text-muted-foreground font-medium mb-1">{title}</p>
+        <p className="text-sm text-muted-foreground/80 mb-6">Juleb Inc</p>
 
         {/* Social Links */}
         {(website || linkedin) && (
-          <div className="flex justify-center gap-3 mb-4">
+          <div className="flex justify-center gap-4 mb-5">
             {website && (
               <a 
                 href={website} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-primary hover:text-secondary transition-colors"
+                className="text-primary hover:text-primary/80 transition-all hover:scale-110"
               >
-                <Globe className="w-6 h-6" />
+                <Globe className="w-7 h-7" />
               </a>
             )}
             {linkedin && (
@@ -92,9 +96,9 @@ END:VCARD`;
                 href={linkedin} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-primary hover:text-secondary transition-colors"
+                className="text-primary hover:text-primary/80 transition-all hover:scale-110"
               >
-                <Linkedin className="w-6 h-6" />
+                <Linkedin className="w-7 h-7" />
               </a>
             )}
           </div>
@@ -102,23 +106,23 @@ END:VCARD`;
 
         {/* Description */}
         {description && (
-          <p className="text-sm text-foreground mb-6 leading-relaxed">
+          <p className="text-sm text-foreground/90 mb-8 leading-relaxed px-2">
             {description}
           </p>
         )}
 
         {/* Contact Details */}
-        <div className="space-y-3 mb-6">
-          <div className="flex items-center gap-3 bg-muted/50 p-3 rounded-xl">
-            <div className="bg-primary p-2 rounded-full">
-              <Mail className="w-4 h-4 text-white" />
+        <div className="space-y-3 mb-8">
+          <div className="flex items-center gap-3 bg-muted/40 p-4 rounded-xl border border-border/30">
+            <div className="bg-primary p-2.5 rounded-full">
+              <Mail className="w-4 h-4 text-primary-foreground" />
             </div>
             <span className="text-sm text-foreground font-medium">{email}</span>
           </div>
           
-          <div className="flex items-center gap-3 bg-muted/50 p-3 rounded-xl">
-            <div className="bg-primary p-2 rounded-full">
-              <Phone className="w-4 h-4 text-white" />
+          <div className="flex items-center gap-3 bg-muted/40 p-4 rounded-xl border border-border/30">
+            <div className="bg-primary p-2.5 rounded-full">
+              <Phone className="w-4 h-4 text-primary-foreground" />
             </div>
             <span className="text-sm text-foreground font-medium">{phone}</span>
           </div>

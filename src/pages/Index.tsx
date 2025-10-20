@@ -50,12 +50,22 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary to-secondary py-20 px-4">
+      <section className="bg-background py-20 px-4 border-b">
         <div className="container mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-4 tracking-tight">
+          <div className="mb-8">
+            <h1 className="text-6xl md:text-7xl font-bold tracking-wide mb-2" style={{ 
+              color: 'hsl(var(--primary))',
+              textShadow: '0 0 1px hsl(var(--primary))',
+              WebkitTextStroke: '2px hsl(var(--primary))',
+              WebkitTextFillColor: 'transparent'
+            }}>
+              JULEB
+            </h1>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             Welcome to Juleb Event
-          </h1>
-          <p className="text-xl text-white/90 max-w-2xl mx-auto">
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Join us and connect with the team transforming pharmaceutical supply chains
           </p>
         </div>
@@ -69,17 +79,16 @@ const Index = () => {
       </section>
 
       {/* Company Link Section */}
-      <section className="py-12 px-4 bg-muted/30">
+      <section className="py-16 px-4 bg-background">
         <div className="container mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6 text-foreground">Learn More About Juleb</h2>
-          <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
+          <h2 className="text-4xl font-bold mb-6 text-foreground">Learn More About Juleb</h2>
+          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
             Discover how Juleb is revolutionizing pharmaceutical supply chain management
             with AI-powered modular ERP solutions.
           </p>
           <Button 
             size="lg"
-            variant="outline"
-            className="border-primary text-primary hover:bg-primary hover:text-white"
+            className="text-lg px-8"
             asChild
           >
             <a 
@@ -89,18 +98,18 @@ const Index = () => {
               className="flex items-center gap-2"
             >
               Visit Juleb Company Profile
-              <ExternalLink className="w-4 h-4" />
+              <ExternalLink className="w-5 h-5" />
             </a>
           </Button>
         </div>
       </section>
 
       {/* Team Section */}
-      <section className="py-16 px-4">
+      <section className="py-20 px-4 bg-muted/20">
         <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4 text-foreground">Meet Our Team</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl font-bold mb-6 text-foreground">Meet Our Team</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Connect with the Juleb team attending the event. Click to download their contact information.
             </p>
           </div>
