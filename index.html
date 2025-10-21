@@ -1,31 +1,954 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png">
-    <title>Juleb Event - Register & Meet Our Team</title>
-    <meta name="description" content="Join the Juleb event and meet our team. Register your attendance and connect with our pharmaceutical supply chain experts." />
-    <meta name="author" content="Juleb Inc" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png">
+  <title>Juleb Event - Register & Meet Our Team</title>
+  <meta name="description" content="Join the Juleb event and meet our team. Register your attendance and connect with our pharmaceutical supply chain experts." />
+  <meta name="author" content="Juleb Inc" />
+  
+  <meta property="og:title" content="Juleb Event - Register & Meet Our Team" />
+  <meta property="og:description" content="Join the Juleb event and meet our team. Register your attendance and connect with our pharmaceutical supply chain experts." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+  
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@lovable_dev" />
+  <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    :root {
+      --background: 0 0% 97%;
+      --foreground: 220 15% 20%;
+      --card: 0 0% 100%;
+      --card-foreground: 220 15% 20%;
+      --popover: 0 0% 100%;
+      --popover-foreground: 220 15% 20%;
+      --primary: 20 88% 56%;
+      --primary-foreground: 0 0% 100%;
+      --secondary: 20 100% 70%;
+      --secondary-foreground: 0 0% 0%;
+      --muted: 0 0% 93%;
+      --muted-foreground: 220 10% 46%;
+      --accent: 0 0% 93%;
+      --accent-foreground: 220 15% 20%;
+      --destructive: 0 84.2% 60.2%;
+      --destructive-foreground: 0 0% 98%;
+      --border: 0 0% 88%;
+      --input: 0 0% 88%;
+      --ring: 20 88% 56%;
+      --radius: 0.75rem;
+    }
+    
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background-color: hsl(var(--background));
+      color: hsl(var(--foreground));
+      line-height: 1.6;
+    }
+    
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    
+    /* Hero Section */
+    .hero {
+      background-color: hsl(var(--background));
+      border-bottom: 1px solid hsl(var(--border));
+      padding: 2.5rem 0;
+      text-align: center;
+    }
+    
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 0.75rem;
+      -webkit-text-stroke: 2px hsl(var(--primary));
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+      letter-spacing: 0.05em;
+    }
+    
+    .hero p {
+      font-size: 1rem;
+      color: hsl(var(--muted-foreground));
+      margin-bottom: 2rem;
+    }
+    
+    /* Registration Form */
+    .registration-section {
+      background-color: hsl(var(--background));
+      padding: 2.5rem 0;
+    }
+    
+    .form-card {
+      max-width: 42rem;
+      margin: 0 auto;
+      background-color: hsl(var(--card));
+      border: 1px solid hsl(var(--border) / 0.5);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+    }
+    
+    .form-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .form-icon {
+      background-color: hsl(var(--primary) / 0.1);
+      padding: 0.75rem;
+      border-radius: var(--radius);
+    }
+    
+    .form-header h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: hsl(var(--foreground));
+    }
+    
+    .form-header p {
+      font-size: 0.875rem;
+      color: hsl(var(--muted-foreground));
+    }
+    
+    .form-group {
+      margin-bottom: 1rem;
+    }
+    
+    label {
+      display: block;
+      font-size: 0.875rem;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+      color: hsl(var(--foreground));
+    }
+    
+    input {
+      width: 100%;
+      height: 2.5rem;
+      padding: 0.5rem 0.75rem;
+      font-size: 0.875rem;
+      background-color: hsl(var(--background));
+      border: 1px solid hsl(var(--input));
+      border-radius: calc(var(--radius) - 2px);
+      outline: none;
+      transition: all 0.2s;
+    }
+    
+    input:focus {
+      border-color: hsl(var(--ring));
+      box-shadow: 0 0 0 3px hsl(var(--ring) / 0.1);
+    }
+    
+    .btn {
+      width: 100%;
+      height: 2.5rem;
+      padding: 0.5rem 1rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      background-color: hsl(var(--primary));
+      color: hsl(var(--primary-foreground));
+      border: none;
+      border-radius: calc(var(--radius) - 2px);
+      cursor: pointer;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+    
+    .btn:hover {
+      opacity: 0.9;
+    }
+    
+    .btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+    
+    /* Company Link Section */
+    .company-section {
+      background-color: hsl(var(--background));
+      padding: 3rem 0;
+      text-align: center;
+    }
+    
+    .company-section h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    
+    .company-section p {
+      font-size: 0.875rem;
+      color: hsl(var(--muted-foreground));
+      margin-bottom: 1.5rem;
+    }
+    
+    /* Team Section */
+    .team-section {
+      background-color: hsl(var(--background));
+      padding: 3rem 0 4rem;
+    }
+    
+    .team-section h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+    
+    .team-section > p {
+      font-size: 0.875rem;
+      color: hsl(var(--muted-foreground));
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    
+    .employee-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+    
+    /* Employee Card */
+    .employee-card {
+      background-color: hsl(var(--card));
+      border: 1px solid hsl(var(--border) / 0.5);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: all 0.3s;
+    }
+    
+    .employee-card:hover {
+      box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+      transform: translateY(-0.5rem);
+    }
+    
+    .card-header {
+      background-color: hsl(var(--primary));
+      padding: 0.75rem;
+      text-align: center;
+    }
+    
+    .card-header h3 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      -webkit-text-stroke: 1.5px hsl(var(--primary-foreground));
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+      letter-spacing: 0.1em;
+    }
+    
+    .card-photo {
+      display: flex;
+      justify-content: center;
+      padding-top: 2rem;
+      margin-bottom: 1rem;
+    }
+    
+    .photo-wrapper {
+      background-color: hsl(var(--card));
+      padding: 0.5rem;
+      border-radius: 1.5rem;
+      box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+      border: 4px solid hsl(var(--background));
+    }
+    
+    .photo-wrapper img {
+      width: 6rem;
+      height: 6rem;
+      border-radius: 1rem;
+      object-fit: cover;
+    }
+    
+    .card-info {
+      padding: 0 1rem 1.5rem;
+      text-align: center;
+    }
+    
+    .card-info h4 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+    
+    .card-info .title {
+      font-size: 0.875rem;
+      color: hsl(var(--muted-foreground));
+      font-weight: 500;
+      margin-bottom: 0.25rem;
+    }
+    
+    .card-info .company {
+      font-size: 0.75rem;
+      color: hsl(var(--muted-foreground) / 0.8);
+      margin-bottom: 1rem;
+    }
+    
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+    
+    .social-links a {
+      color: hsl(var(--primary));
+      transition: all 0.2s;
+    }
+    
+    .social-links a:hover {
+      color: hsl(var(--primary) / 0.8);
+      transform: scale(1.1);
+    }
+    
+    .social-links svg {
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+    
+    .description {
+      font-size: 0.75rem;
+      color: hsl(var(--foreground) / 0.9);
+      line-height: 1.6;
+      margin-bottom: 1.25rem;
+      padding: 0 0.25rem;
+    }
+    
+    .contact-details {
+      margin-bottom: 1.25rem;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background-color: hsl(var(--muted) / 0.4);
+      padding: 0.75rem;
+      border-radius: var(--radius);
+      border: 1px solid hsl(var(--border) / 0.3);
+      margin-bottom: 0.5rem;
+    }
+    
+    .contact-icon {
+      background-color: hsl(var(--primary));
+      padding: 0.5rem;
+      border-radius: 9999px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .contact-icon svg {
+      width: 0.75rem;
+      height: 0.75rem;
+      color: hsl(var(--primary-foreground));
+    }
+    
+    .contact-text {
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: hsl(var(--foreground));
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    
+    .spinner {
+      width: 1rem;
+      height: 1rem;
+      border: 2px solid hsl(var(--primary-foreground) / 0.3);
+      border-top-color: hsl(var(--primary-foreground));
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    
+    /* Toast Notification */
+    .toast {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background-color: hsl(var(--card));
+      border: 1px solid hsl(var(--border));
+      border-radius: var(--radius);
+      padding: 1rem 1.5rem;
+      box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+      display: none;
+      align-items: center;
+      gap: 0.75rem;
+      z-index: 1000;
+      animation: slideIn 0.3s ease-out;
+    }
+    
+    .toast.show {
+      display: flex;
+    }
+    
+    .toast.success {
+      border-left: 4px solid hsl(142 76% 36%);
+    }
+    
+    .toast.error {
+      border-left: 4px solid hsl(var(--destructive));
+    }
+    
+    @keyframes slideIn {
+      from {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+    
+    /* Responsive */
+    @media (min-width: 640px) {
+      .employee-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (min-width: 768px) {
+      .hero {
+        padding: 5rem 0;
+      }
+      
+      .hero h1 {
+        font-size: 3.75rem;
+      }
+      
+      .hero p {
+        font-size: 1.125rem;
+      }
+      
+      .registration-section {
+        padding: 4rem 0;
+      }
+      
+      .form-card {
+        padding: 2.5rem;
+      }
+      
+      .form-header {
+        gap: 1rem;
+        margin-bottom: 2rem;
+      }
+      
+      .form-icon {
+        padding: 1rem;
+      }
+      
+      .form-header h2 {
+        font-size: 1.875rem;
+      }
+      
+      .form-header p {
+        font-size: 1rem;
+      }
+      
+      .form-group {
+        margin-bottom: 1.5rem;
+      }
+      
+      label {
+        font-size: 1rem;
+      }
+      
+      input {
+        height: 3rem;
+        font-size: 1rem;
+      }
+      
+      .btn {
+        height: 3rem;
+        font-size: 1rem;
+      }
+      
+      .company-section {
+        padding: 4rem 0;
+      }
+      
+      .company-section h2 {
+        font-size: 2rem;
+      }
+      
+      .company-section p {
+        font-size: 1rem;
+      }
+      
+      .team-section {
+        padding: 4rem 0 5rem;
+      }
+      
+      .team-section h2 {
+        font-size: 2rem;
+      }
+      
+      .team-section > p {
+        font-size: 1rem;
+      }
+      
+      .employee-grid {
+        gap: 2rem;
+      }
+      
+      .card-header h3 {
+        font-size: 1.5rem;
+      }
+      
+      .card-photo {
+        padding-top: 2.5rem;
+        margin-bottom: 1.5rem;
+      }
+      
+      .photo-wrapper img {
+        width: 9rem;
+        height: 9rem;
+      }
+      
+      .card-info {
+        padding: 0 1.5rem 2rem;
+      }
+      
+      .card-info h4 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
+      
+      .card-info .title {
+        font-size: 1rem;
+      }
+      
+      .card-info .company {
+        font-size: 0.875rem;
+        margin-bottom: 1.5rem;
+      }
+      
+      .social-links {
+        gap: 1rem;
+        margin-bottom: 1.25rem;
+      }
+      
+      .social-links svg {
+        width: 1.75rem;
+        height: 1.75rem;
+      }
+      
+      .description {
+        font-size: 0.875rem;
+        margin-bottom: 2rem;
+        padding: 0 0.5rem;
+      }
+      
+      .contact-details {
+        margin-bottom: 2rem;
+      }
+      
+      .contact-item {
+        gap: 0.75rem;
+        padding: 1rem;
+        margin-bottom: 0.75rem;
+      }
+      
+      .contact-icon {
+        padding: 0.625rem;
+      }
+      
+      .contact-icon svg {
+        width: 1rem;
+        height: 1rem;
+      }
+      
+      .contact-text {
+        font-size: 0.875rem;
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      .employee-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    
+    @media (min-width: 1280px) {
+      .employee-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>JULEB</h1>
+      <p>Transforming Healthcare Supply Chain</p>
+    </div>
+  </section>
 
-    <meta property="og:title" content="Juleb Event - Register & Meet Our Team" />
-    <meta property="og:description" content="Join the Juleb event and meet our team. Register your attendance and connect with our pharmaceutical supply chain experts." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+  <!-- Registration Form -->
+  <section class="registration-section">
+    <div class="container">
+      <div class="form-card">
+        <div class="form-header">
+          <div class="form-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: hsl(var(--primary))">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <line x1="19" x2="19" y1="8" y2="14"/>
+              <line x1="22" x2="16" y1="11" y2="11"/>
+            </svg>
+          </div>
+          <div>
+            <h2>Mark Your Attendance</h2>
+            <p>Let us get to know you</p>
+          </div>
+        </div>
+        
+        <form id="registrationForm">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="+971 XXX XXXXXX" required>
+          </div>
+          
+          <button type="submit" class="btn" id="submitBtn">
+            Register Now
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
+  <!-- Company Link -->
+  <section class="company-section">
+    <div class="container">
+      <h2>Learn More About Juleb</h2>
+      <p>Discover how we're revolutionizing pharmaceutical supply chain management</p>
+      <a href="https://juleb.com" target="_blank" rel="noopener noreferrer">
+        <button class="btn" style="max-width: 300px; margin: 0 auto;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+            <path d="M2 12h20"/>
+          </svg>
+          Visit Juleb.com
+        </button>
+      </a>
+    </div>
+  </section>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+  <!-- Team Section -->
+  <section class="team-section">
+    <div class="container">
+      <h2>Meet Our Team</h2>
+      <p>Connect with Juleb's pharmaceutical supply chain experts</p>
+      
+      <div class="employee-grid" id="employeeGrid"></div>
+    </div>
+  </section>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast"></div>
+
+  <script>
+    // Employee Data
+    const employees = [
+      {
+        name: "Yousuf Jamjoom",
+        title: "Co-Founder & CEO",
+        email: "yousuf@juleb.com",
+        phone: "+966550012345",
+        linkedin: "https://www.linkedin.com/in/yousufjamjoom/",
+        photo: "src/profile-pics/yousuf.png",
+        description: "Leading Juleb's vision to revolutionize pharmaceutical supply chain management across the Middle East."
+      },
+      {
+        name: "Mey Youssef",
+        title: "Co-Founder & COO",
+        email: "mey@juleb.com",
+        phone: "+966550023456",
+        linkedin: "https://www.linkedin.com/in/m-youssef3/",
+        photo: "src/profile-pics/mey.png",
+        description: "Driving operational excellence and ensuring seamless implementation of Juleb's innovative solutions."
+      },
+      {
+        name: "Nada Khojah",
+        title: "CFO",
+        email: "nada@juleb.com",
+        phone: "+966550034567",
+        linkedin: "https://www.linkedin.com/in/nada-khojah/",
+        photo: "src/profile-pics/nada.jpeg",
+        description: "Managing financial strategy and ensuring sustainable growth for Juleb's expanding operations."
+      },
+      {
+        name: "Jamal Subhi",
+        title: "CTO",
+        email: "jamal@juleb.com",
+        phone: "+966550045678",
+        website: "https://juleb.com",
+        photo: "src/profile-pics/J - iPhone Notification 20pt 40px x1.png",
+        description: "Architecting cutting-edge technology solutions to transform healthcare supply chain operations."
+      },
+      {
+        name: "Sabry Darwish",
+        title: "Head of Growth",
+        email: "sabry@juleb.com",
+        phone: "+966550056789",
+        linkedin: "https://www.linkedin.com/in/sabrydarwish/",
+        photo: "src/profile-pics/Sabry.png",
+        description: "Scaling Juleb's market presence and building strategic partnerships across the healthcare sector."
+      },
+      {
+        name: "Hussain Al-Ghanim",
+        title: "Head of Product",
+        email: "hussain@juleb.com",
+        phone: "+966550067890",
+        linkedin: "https://www.linkedin.com/in/hussain-alghanim/",
+        photo: "src/profile-pics/hussain.jpg",
+        description: "Designing intuitive products that solve real-world challenges in pharmaceutical distribution."
+      },
+      {
+        name: "Mohamed Sabbagh",
+        title: "Head of Design",
+        email: "mohamed@juleb.com",
+        phone: "+966550078901",
+        linkedin: "https://www.linkedin.com/in/mohamedsabbagh/",
+        photo: "src/profile-pics/sabbagh.jpg",
+        description: "Creating beautiful, user-centric experiences that make complex workflows simple and efficient."
+      }
+    ];
+
+    // Generate Employee Cards
+    function generateEmployeeCards() {
+      const grid = document.getElementById('employeeGrid');
+      
+      employees.forEach(employee => {
+        const card = document.createElement('div');
+        card.className = 'employee-card';
+        
+        const socialLinks = [];
+        if (employee.website) {
+          socialLinks.push(`
+            <a href="${employee.website}" target="_blank" rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+                <path d="M2 12h20"/>
+              </svg>
+            </a>
+          `);
+        }
+        if (employee.linkedin) {
+          socialLinks.push(`
+            <a href="${employee.linkedin}" target="_blank" rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                <rect width="4" height="12" x="2" y="9"/>
+                <circle cx="4" cy="4" r="2"/>
+              </svg>
+            </a>
+          `);
+        }
+        
+        card.innerHTML = `
+          <div class="card-header">
+            <h3>JULEB</h3>
+          </div>
+          
+          <div class="card-photo">
+            <div class="photo-wrapper">
+              <img src="${employee.photo}" alt="${employee.name}">
+            </div>
+          </div>
+          
+          <div class="card-info">
+            <h4>${employee.name}</h4>
+            <p class="title">${employee.title}</p>
+            <p class="company">Juleb Inc</p>
+            
+            ${socialLinks.length > 0 ? `
+              <div class="social-links">
+                ${socialLinks.join('')}
+              </div>
+            ` : ''}
+            
+            ${employee.description ? `
+              <p class="description">${employee.description}</p>
+            ` : ''}
+            
+            <div class="contact-details">
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect width="20" height="16" x="2" y="4" rx="2"/>
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                  </svg>
+                </div>
+                <span class="contact-text">${employee.email}</span>
+              </div>
+              
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                  </svg>
+                </div>
+                <span class="contact-text">${employee.phone}</span>
+              </div>
+            </div>
+            
+            <button class="btn" onclick="downloadVCard('${employee.name}', '${employee.title}', '${employee.email}', '${employee.phone}', '${employee.website || ''}')">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <line x1="19" x2="19" y1="8" y2="14"/>
+                <line x1="22" x2="16" y1="11" y2="11"/>
+              </svg>
+              Add to contact
+            </button>
+          </div>
+        `;
+        
+        grid.appendChild(card);
+      });
+    }
+
+    // Download vCard
+    function downloadVCard(name, title, email, phone, website) {
+      const vcard = `BEGIN:VCARD
+VERSION:3.0
+FN:${name}
+TITLE:${title}
+ORG:Juleb Inc
+EMAIL:${email}
+TEL:${phone}
+${website ? `URL:${website}` : ''}
+END:VCARD`;
+
+      const blob = new Blob([vcard], { type: 'text/vcard' });
+      const url = window.URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = `${name.replace(/\s+/g, '_')}.vcf`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(url);
+      
+      showToast(`Contact for ${name} downloaded!`, 'success');
+    }
+
+    // Show Toast
+    function showToast(message, type = 'success') {
+      const toast = document.getElementById('toast');
+      toast.textContent = message;
+      toast.className = `toast ${type} show`;
+      
+      setTimeout(() => {
+        toast.className = 'toast';
+      }, 3000);
+    }
+
+    // Form Submission
+    document.getElementById('registrationForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      
+      // Validation
+      if (!name || !email || !phone) {
+        showToast('Please fill in all fields', 'error');
+        return;
+      }
+      
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        showToast('Please enter a valid email address', 'error');
+        return;
+      }
+      
+      const submitBtn = document.getElementById('submitBtn');
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<div class="spinner"></div> Submitting...';
+      
+      try {
+        const data = {
+          name,
+          email,
+          phone,
+          timestamp: new Date().toLocaleString()
+        };
+        
+        // Submit to Google Sheets
+        const scriptUrl = 'https://script.google.com/macros/s/AKfycbwZGN5u1SmiNxhxTBAUqZGPIcMt-4gbm1vQ4aGjqrS3OW_6cYcsbrn_toVOQwDXIaqCgA/exec';
+        
+        const response = await fetch(scriptUrl, {
+          method: 'POST',
+          mode: 'cors',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        });
+        
+        if (!response.ok) {
+          throw new Error('Failed to submit registration');
+        }
+        
+        showToast('Registration successful!', 'success');
+        document.getElementById('registrationForm').reset();
+        
+      } catch (error) {
+        console.error('Registration failed:', error);
+        showToast('Registration failed. Please try again.', 'error');
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = 'Register Now';
+      }
+    });
+
+    // Initialize
+    generateEmployeeCards();
+  </script>
+</body>
 </html>
